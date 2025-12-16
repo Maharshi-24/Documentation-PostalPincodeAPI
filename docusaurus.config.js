@@ -59,15 +59,18 @@ const config = {
     ],
   ],
 
+  clientModules: [
+    require.resolve('./src/modules/detectSystemTheme.js'),
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       colorMode: {
-        defaultMode: 'light',
         disableSwitch: false,
-        respectPrefersColorScheme: true, // Respect user's system preference
+        // respectPrefersColorScheme removed to avoid tri-state switch
       },
       navbar: {
         title: "Postal Pincode API",
