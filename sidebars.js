@@ -21,38 +21,136 @@ const sidebars = {
       type: 'category',
       label: 'Pincode Operations',
       items: [
-        'api/endpoints/pincode/get-details',
-        'api/endpoints/pincode/lookup',
-        'api/endpoints/pincode/batch-lookup',
-        'api/endpoints/pincode/validate',
-        'api/endpoints/pincode/autocomplete',
+        {
+          type: 'doc',
+          id: 'api/endpoints/pincode/get-details',
+          label: 'Get Pincode Details',
+          customProps: {
+            method: 'GET'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/pincode/lookup',
+          label: 'Pincode Lookup',
+          customProps: {
+            method: 'GET'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/pincode/batch-lookup',
+          label: 'Batch Lookup',
+          customProps: {
+            method: 'POST'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/pincode/validate',
+          label: 'Validate Pincode',
+          customProps: {
+            method: 'GET'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/pincode/autocomplete',
+          label: 'Autocomplete',
+          customProps: {
+            method: 'GET'
+          }
+        },
       ],
     },
     {
       type: 'category',
       label: 'Location Services',
       items: [
-        'api/endpoints/location/nearest',
-        'api/endpoints/location/reverse-geocoding',
-        'api/endpoints/location/distance',
+        {
+          type: 'doc',
+          id: 'api/endpoints/location/nearest',
+          label: 'Find Nearest',
+          customProps: {
+            method: 'GET'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/location/reverse-geocoding',
+          label: 'Reverse Geocoding',
+          customProps: {
+            method: 'GET'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/location/distance',
+          label: 'Calculate Distance',
+          customProps: {
+            method: 'GET'
+          }
+        },
       ],
     },
     {
       type: 'category',
       label: 'Search',
       items: [
-        'api/endpoints/search/general-search',
-        'api/endpoints/search/random',
+        {
+          type: 'doc',
+          id: 'api/endpoints/search/general-search',
+          label: 'General Search',
+          customProps: {
+            method: 'GET'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/search/random',
+          label: 'Random Pincode',
+          customProps: {
+            method: 'GET'
+          }
+        },
       ],
     },
     {
       type: 'category',
       label: 'Hierarchical Data',
       items: [
-        'api/endpoints/hierarchical/states',
-        'api/endpoints/hierarchical/districts',
-        'api/endpoints/hierarchical/offices',
-        'api/endpoints/hierarchical/circles',
+        {
+          type: 'doc',
+          id: 'api/endpoints/hierarchical/states',
+          label: 'Get All States',
+          customProps: {
+            method: 'GET'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/hierarchical/districts',
+          label: 'Get Districts',
+          customProps: {
+            method: 'GET'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/hierarchical/offices',
+          label: 'Get Offices',
+          customProps: {
+            method: 'GET'
+          }
+        },
+        {
+          type: 'doc',
+          id: 'api/endpoints/hierarchical/circles',
+          label: 'Get Circles',
+          customProps: {
+            method: 'GET'
+          }
+        },
       ],
     },
     'api/examples',
