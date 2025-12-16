@@ -52,9 +52,9 @@
 
 /* Section titles (HTML headings) - all sections including API Documentation */
 .sidebar-section-title {
-  font-weight: 600;
-  font-size: 0.8125rem; /* 13px - slightly smaller */
-  color: rgb(23, 27, 26); /* gray-900 */
+  font-weight: 600; /* Bold to distinguish since size is same */
+  font-size: 0.875rem; /* 14px - SAME size as items */
+  color: rgb(23, 27, 26); /* gray-900 (Not grey/lighter) */
   padding: 6px 0;
   margin-top: 24px;
   margin-bottom: 2px;
@@ -75,13 +75,13 @@
   display: flex;
   align-items: center;
   padding: 6px 12px;
-  font-size: 0.8125rem; /* 13px - reduced */
+  font-size: 0.875rem; /* 14px - SAME size as headers */
 }
 
 /* Endpoint text color - lighter gray for non-headers */
 .theme-doc-sidebar-item-link-level-2 .menu__link,
 .theme-doc-sidebar-item-link-level-3 .menu__link {
-  color: rgb(75, 85, 99); /* gray-600 */
+  color: rgb(107, 114, 128); /* gray-500 - explicitly grey */
 }
 
 [data-theme='dark'] .theme-doc-sidebar-item-link-level-2 .menu__link,
@@ -132,14 +132,14 @@
   color: rgb(74, 222, 128); /* dark:text-green-400 */
 }
 
-/* POST method - blue (#3064E3) */
+/* POST method - lighter blue for light mode */
 .menu__link[data-method="POST"]::before {
-  background-color: #3064E3;
+  background-color: #5B89F7; /* Lighter shade of the original #3064E3 */
   color: #FFFFFF;
 }
 
 [data-theme='dark'] .menu__link[data-method="POST"]::before {
-  background-color: #3064E3;
+  background-color: #3064E3; /* Keep original darker blue for dark mode contrast */
   color: #FFFFFF;
 }
 
