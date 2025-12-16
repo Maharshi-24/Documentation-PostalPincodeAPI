@@ -76,7 +76,7 @@ const config = {
         title: "Postal Pincode API",
         logo: {
           alt: "Indian Postal Pincode API Logo",
-          src: "img/logo.svg",
+          src: "img/logo.png",
         },
         items: [],
       },
