@@ -229,6 +229,6 @@ This typically occurs during:
 
 ## Next Steps
 
-- Explore [Pincode Operations](endpoints/pincode/get-details)
-- Learn about [Location Services](endpoints/location/nearest)
+- Explore [Pincode Operations](/api/endpoints/pincode/get-details)
+- Learn about [Location Services](/api/endpoints/location/nearest)
 - Check out [Usage Examples](examples.md)
