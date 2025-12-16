@@ -73,18 +73,7 @@ const config = {
           alt: "Indian Postal Pincode API Logo",
           src: "img/logo.svg",
         },
-        items: [
-          {
-            href: "https://postal-pincode-api.vercel.app/api/v1",
-            label: "API Base URL",
-            position: "right",
-          },
-          {
-            href: "https://github.com/yourusername/PostalPincodeAPI",
-            label: "GitHub",
-            position: "right",
-          },
-        ],
+        items: [],
       },
       footer: {
         style: "dark",
@@ -123,19 +112,7 @@ const config = {
               },
             ],
           },
-          {
-            title: "Resources",
-            items: [
-              {
-                label: "API Base URL",
-                href: "https://postal-pincode-api.vercel.app/api/v1",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/yourusername/PostalPincodeAPI",
-              },
-            ],
-          },
+
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Indian Postal Pincode API. Built with Docusaurus.`,
       },
