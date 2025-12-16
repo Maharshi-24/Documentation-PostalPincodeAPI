@@ -208,3 +208,10 @@
 .theme-doc-sidebar-item-link {
   margin: 2px 0;
 }
+
+/* Navbar Logo Sizing */
+.navbar__logo {
+  height: 48px; /* Force height */
+  width: auto; /* Maintain aspect ratio */
+  max-width: none; /* Prevent constraint */
+}
