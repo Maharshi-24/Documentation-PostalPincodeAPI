@@ -793,4 +793,4 @@ If you continue to experience issues:
 
 - Review [Usage Examples](examples.md) for implementation patterns
 - Check [API Overview](overview.md) for rate limiting details
-- Explore [Endpoint Documentation](endpoints/pincode-operations.md)
+- Explore [Endpoint Documentation](endpoints/pincode/get-details)

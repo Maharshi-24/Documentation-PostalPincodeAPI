@@ -65,7 +65,9 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: true, // Respect user's system preference
       },
       navbar: {
         title: "Postal Pincode API",
@@ -75,47 +77,7 @@ const config = {
         },
         items: [],
       },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "Documentation",
-            items: [
-              {
-                label: "API Overview",
-                to: "/api/overview",
-              },
-              {
-                label: "Examples",
-                to: "/api/examples",
-              },
-              {
-                label: "Error Codes",
-                to: "/api/errors",
-              },
-            ],
-          },
-          {
-            title: "API Endpoints",
-            items: [
-              {
-                label: "Pincode Operations",
-                to: "/api/endpoints/pincode/get-details",
-              },
-              {
-                label: "Location Services",
-                to: "/api/endpoints/location/nearest",
-              },
-              {
-                label: "Search",
-                to: "/api/endpoints/search/general-search",
-              },
-            ],
-          },
-
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Indian Postal Pincode API. Built with Docusaurus.`,
-      },
+      // Footer removed as requested
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,

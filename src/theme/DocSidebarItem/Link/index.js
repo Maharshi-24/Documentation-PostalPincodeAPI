@@ -28,10 +28,6 @@ export default function DocSidebarItemLink({
   // Extract HTTP method from customProps
   const httpMethod = customProps?.method;
   
-  // Debug logging
-  if (httpMethod) {
-    console.log('Link:', label, 'Method:', httpMethod, 'CustomProps:', customProps);
-  }
   
   return (
     <li

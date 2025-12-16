@@ -42,60 +42,125 @@
   --ifm-navbar-background-color: rgb(9, 13, 13);
 }
 
-/* HTTP Method badges in sidebar */
+/* Global Styling */
+:root {
+  --ifm-font-size-base: 15px; /* Slightly smaller base font (default is 16px) */
+  --ifm-heading-font-weight: 700;
+}
+
+/* Sidebar Styling */
+
+/* Section titles (HTML headings) - all sections including API Documentation */
+.sidebar-section-title {
+  font-weight: 600;
+  font-size: 0.8125rem; /* 13px - slightly smaller */
+  color: rgb(23, 27, 26); /* gray-900 */
+  padding: 6px 0;
+  margin-top: 24px;
+  margin-bottom: 2px;
+}
+
+[data-theme='dark'] .sidebar-section-title {
+  color: rgb(222, 226, 226); /* gray-200 */
+}
+
+/* First section (API Documentation) should not have top margin */
+.sidebar-section-title:first-child {
+  margin-top: 0;
+}
+
+/* Endpoint links with HTTP method badges */
 .theme-doc-sidebar-item-link-level-2 .menu__link,
 .theme-doc-sidebar-item-link-level-3 .menu__link {
   display: flex;
   align-items: center;
+  padding: 6px 12px;
+  font-size: 0.8125rem; /* 13px - reduced */
 }
 
-.theme-doc-sidebar-item-link-level-2 .menu__link::before,
-.theme-doc-sidebar-item-link-level-3 .menu__link::before {
+/* Endpoint text color - lighter gray for non-headers */
+.theme-doc-sidebar-item-link-level-2 .menu__link,
+.theme-doc-sidebar-item-link-level-3 .menu__link {
+  color: rgb(75, 85, 99); /* gray-600 */
+}
+
+[data-theme='dark'] .theme-doc-sidebar-item-link-level-2 .menu__link,
+[data-theme='dark'] .theme-doc-sidebar-item-link-level-3 .menu__link {
+  color: rgb(156, 163, 175); /* gray-400 */
+}
+
+/* Active endpoint - styled like the reference */
+.theme-doc-sidebar-item-link-level-2 .menu__link--active,
+.theme-doc-sidebar-item-link-level-3 .menu__link--active {
+  color: var(--ifm-color-primary);
+  background-color: rgba(13, 147, 115, 0.1); /* Primary with 10% opacity */
+  border-radius: 0.75rem; /* rounded-xl */
+  text-shadow: -0.2px 0 0 currentcolor, 0.2px 0 0 currentcolor; /* faux bold */
+}
+
+[data-theme='dark'] .theme-doc-sidebar-item-link-level-2 .menu__link--active,
+[data-theme='dark'] .theme-doc-sidebar-item-link-level-3 .menu__link--active {
+  color: var(--ifm-color-primary-light);
+  background-color: rgba(7, 201, 131, 0.1); /* Primary light with 10% opacity */
+}
+
+/* HTTP Method badges */
+.menu__link[data-method]::before {
   content: attr(data-method);
   display: inline-block;
-  padding: 2px 6px;
-  margin-right: 8px;
-  border-radius: 3px;
-  font-size: 9px;
+  padding: 2px 6px; /* px-1 py-0.5 approx */
+  margin-right: 10px;
+  border-radius: 0.375rem; /* rounded-md */
+  font-size: 0.55rem; /* text-[0.55rem] */
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.3px;
-  min-width: 35px;
+  letter-spacing: 0;
+  min-width: 32px;
   text-align: center;
   flex-shrink: 0;
+  line-height: 1.25; /* leading-tight */
 }
 
 /* GET method - green */
 .menu__link[data-method="GET"]::before {
-  content: "GET";
-  background-color: #49cc90;
-  color: #000;
+  background-color: rgba(73, 204, 144, 0.2); /* green-400/20 */
+  color: rgb(21, 128, 61); /* text-green-700 */
 }
 
-/* POST method - blue */
+[data-theme='dark'] .menu__link[data-method="GET"]::before {
+  background-color: rgba(74, 222, 128, 0.2); /* dark:bg-green-400/20 */
+  color: rgb(74, 222, 128); /* dark:text-green-400 */
+}
+
+/* POST method - blue (#3064E3) */
 .menu__link[data-method="POST"]::before {
-  content: "POST";
-  background-color: #61affe;
-  color: #000;
+  background-color: #3064E3;
+  color: #FFFFFF;
 }
 
-/* PUT method - orange */
-.menu__link[data-method="PUT"]::before {
-  content: "PUT";
-  background-color: #fca130;
-  color: #000;
+[data-theme='dark'] .menu__link[data-method="POST"]::before {
+  background-color: #3064E3;
+  color: #FFFFFF;
 }
 
 /* DELETE method - red */
 .menu__link[data-method="DELETE"]::before {
-  content: "DELETE";
-  background-color: #f93e3e;
-  color: #fff;
+  background-color: rgba(248, 113, 113, 0.2); /* red-400/20 */
+  color: rgb(185, 28, 28); /* text-red-700 */
+}
+
+[data-theme='dark'] .menu__link[data-method="DELETE"]::before {
+  background-color: rgba(248, 113, 113, 0.2); /* dark:bg-red-400/20 */
+  color: rgb(248, 113, 113); /* dark:text-red-400 */
+}
+
+/* Table of Contents - Keep original size (Right side) */
+.table-of-contents {
+  font-size: 0.875rem !important; /* 14px - keep larger */
 }
 
 /* PATCH method - cyan */
 .menu__link[data-method="PATCH"]::before {
-  content: "PATCH";
   background-color: #50e3c2;
   color: #000;
 }
@@ -111,7 +176,35 @@
   color: #000;
 }
 
-/* Remove badge from non-endpoint items */
-.menu__link:not([data-method])::before {
-  display: none;
+[data-theme="dark"] .menu__link[data-method="PUT"]::before {
+  background-color: #fca130;
+  color: #000;
+}
+
+[data-theme="dark"] .menu__link[data-method="DELETE"]::before {
+  background-color: #f93e3e;
+  color: #fff;
+}
+
+[data-theme="dark"] .menu__link[data-method="PATCH"]::before {
+  background-color: #50e3c2;
+  color: #000;
+}
+
+/* Sidebar spacing improvements */
+.theme-doc-sidebar-item-category {
+  margin-top: 16px;
+}
+
+.theme-doc-sidebar-item-category:first-child {
+  margin-top: 0;
+}
+
+/* Category list items spacing */
+.theme-doc-sidebar-item-category .menu__list {
+  margin-top: 4px;
+}
+
+.theme-doc-sidebar-item-link {
+  margin: 2px 0;
 }
