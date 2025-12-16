@@ -10,6 +10,8 @@ This page provides essential information about using the Indian Postal Pincode A
 
 All API endpoints are relative to the base URL:
 
+**[https://postal-pincode-api.vercel.app/api/v1](https://postal-pincode-api.vercel.app/api/v1)**
+
 ```
 https://postal-pincode-api.vercel.app/api/v1
 ```
@@ -227,6 +229,6 @@ This typically occurs during:
 
 ## Next Steps
 
-- Explore [Pincode Operations](endpoints/pincode-operations.md)
-- Learn about [Location Services](endpoints/location-services.md)
+- Explore [Pincode Operations](endpoints/pincode/get-details)
+- Learn about [Location Services](endpoints/location/nearest)
 - Check out [Usage Examples](examples.md)
