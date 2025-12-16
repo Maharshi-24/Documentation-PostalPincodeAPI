@@ -1,3 +1,7 @@
+---
+slug: /
+---
+
 # API Overview
 
 This page provides essential information about using the Indian Postal Pincode API, including authentication, rate limiting, and response formats.

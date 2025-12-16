@@ -75,12 +75,6 @@ const config = {
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "apiSidebar",
-            position: "left",
-            label: "API Documentation",
-          },
-          {
             href: "https://postal-pincode-api.vercel.app/api/v1",
             label: "API Base URL",
             position: "right",
