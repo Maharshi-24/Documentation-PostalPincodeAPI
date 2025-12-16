@@ -12,7 +12,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Indian Postal Pincode API",
   tagline: "Fast, reliable, and comprehensive Indian postal code lookup API",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.png",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
