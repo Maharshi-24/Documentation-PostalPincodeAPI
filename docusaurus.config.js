@@ -46,6 +46,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/', // Docs at the root
           sidebarPath: "./sidebars.js",
           // Remove edit URL since this is API documentation
           editUrl: undefined,
@@ -98,16 +99,16 @@ const config = {
             title: "Documentation",
             items: [
               {
-                label: "Getting Started",
-                to: "/docs/intro",
-              },
-              {
                 label: "API Overview",
-                to: "/docs/api/overview",
+                to: "/api/overview",
               },
               {
                 label: "Examples",
-                to: "/docs/api/examples",
+                to: "/api/examples",
+              },
+              {
+                label: "Error Codes",
+                to: "/api/errors",
               },
             ],
           },
@@ -116,25 +117,21 @@ const config = {
             items: [
               {
                 label: "Pincode Operations",
-                to: "/docs/api/endpoints/pincode-operations",
+                to: "/api/endpoints/pincode/get-details",
               },
               {
                 label: "Location Services",
-                to: "/docs/api/endpoints/location-services",
+                to: "/api/endpoints/location/nearest",
               },
               {
                 label: "Search",
-                to: "/docs/api/endpoints/search",
+                to: "/api/endpoints/search/general-search",
               },
             ],
           },
           {
             title: "Resources",
             items: [
-              {
-                label: "Error Codes",
-                to: "/docs/api/errors",
-              },
               {
                 label: "API Base URL",
                 href: "https://postal-pincode-api.vercel.app/api/v1",

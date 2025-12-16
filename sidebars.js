@@ -16,26 +16,47 @@
  */
 const sidebars = {
   apiSidebar: [
-    'intro',
+    'api/overview',
     {
       type: 'category',
-      label: 'API Reference',
+      label: 'Pincode Operations',
       items: [
-        'api/overview',
-        {
-          type: 'category',
-          label: 'Endpoints',
-          items: [
-            'api/endpoints/pincode-operations',
-            'api/endpoints/location-services',
-            'api/endpoints/search',
-            'api/endpoints/hierarchical-data',
-          ],
-        },
-        'api/examples',
-        'api/errors',
+        'api/endpoints/pincode/get-details',
+        'api/endpoints/pincode/lookup',
+        'api/endpoints/pincode/batch-lookup',
+        'api/endpoints/pincode/validate',
+        'api/endpoints/pincode/autocomplete',
       ],
     },
+    {
+      type: 'category',
+      label: 'Location Services',
+      items: [
+        'api/endpoints/location/nearest',
+        'api/endpoints/location/reverse-geocoding',
+        'api/endpoints/location/distance',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Search',
+      items: [
+        'api/endpoints/search/general-search',
+        'api/endpoints/search/random',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Hierarchical Data',
+      items: [
+        'api/endpoints/hierarchical/states',
+        'api/endpoints/hierarchical/districts',
+        'api/endpoints/hierarchical/offices',
+        'api/endpoints/hierarchical/circles',
+      ],
+    },
+    'api/examples',
+    'api/errors',
   ],
 };
 
